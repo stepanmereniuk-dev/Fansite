@@ -1,0 +1,130 @@
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4; /* Fond légèrement gris */
+    color: #333;
+}
+
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* Conteneurs de section */
+.main-description,
+.secondary-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.main-description .content,
+.secondary-description .content {
+    flex: 3; /* Prend 3 parts de l'espace */
+    padding-right: 30px;
+}
+
+.image-placeholder {
+    border: 2px solid #333; /* Bordure pour simuler le cadre dessiné */
+    background-color: #ddd; /* Remplissage pour visualiser l'espace */
+    flex-shrink: 0; /* Empêche de rétrécir */
+}
+
+/* Styles des images dans les sections de description */
+.main-image {
+    width: 200px;
+    height: 180px;
+}
+
+.secondary-image {
+    width: 150px;
+    height: 150px;
+    margin-right: 30px;
+}
+
+.story-lines {
+    /* Style pour les lignes pointillées du croquis */
+    letter-spacing: 2px;
+    color: #888;
+    margin: 5px 0;
+}
+
+/* Section des Membres d'Équipage */
+.crew-members h2 {
+    text-align: center;
+    border: none;
+    font-size: 1.8em;
+    margin-bottom: 30px;
+}
+
+.crew-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espace entre les lignes/groupes */
+}
+
+.member-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.member-box {
+    text-align: center;
+    flex-basis: 150px; /* Taille de base pour les blocs image/nom */
+    flex-grow: 0;
+}
+
+.member-box .image-placeholder {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 5px;
+    border: 1px solid #333;
+}
+
+.description-box {
+    text-align: left;
+    flex-grow: 1; /* Prend l'espace restant pour les descriptions */
+    flex-basis: auto;
+    padding-left: 20px;
+    border-left: 1px solid #ccc;
+}
+
+.full-width-description {
+    /* Pour la disposition où deux images sont suivies d'une description */
+    flex-basis: 300px; /* Ajuster la taille pour que ça fonctionne sur la même ligne */
+}
+
+
+.two-images .member-box:nth-child(1),
+.two-images .member-box:nth-child(2) {
+    flex-basis: 120px;
+}
+
+@media (max-width: 768px) {
+    .main-description,
+    .secondary-description {
+        flex-direction: column;
+    }
+
+    .main-image,
+    .secondary-image {
+        margin: 20px auto;
+    }
+
+    .member-group {
+        flex-direction: column;
+    }
+
+    .member-box,
+    .description-box {
+        width: 100%;
+        text-align: left;
+    }
+}

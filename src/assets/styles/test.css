@@ -1,0 +1,68 @@
+.FUNSITE {
+    font-size: clamp(2rem, 8vw, 4rem);
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem 0;
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
+}
+
+@media (min-width: 768px) {
+    .body-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .sukuna-descript {
+        grid-column: 1 / -1;
+    }
+}
+.floting-cogane {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    height: clamp(60px, 12vw, 100px);
+    width: auto;
+    z-index: 1000;
+    cursor: pointer;
+    animation: floting-cogane-anim 6s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.floting-cogane:hover {
+    transform: scale(1.2) rotate(20deg);
+}
+
+@keyframes floting-cogane-anim {
+    0%, 100% { transform: translateY(0); }
+    25% { transform: translateY(-20px) rotate(5deg); }
+    50% { transform: translateY(10px) rotate(-5deg); }
+    75% { transform: translateY(-15px) rotate(8deg); }
+}
+
+@media (min-width: 1024px) {
+    .body-section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .head-section {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-bar {
+        gap: 15px;
+        padding: 1rem;
+    }
+    
+    .nav-button {
+        width: 45%;
+        font-size: 0.9rem;
+    }
+    
+    .floting-cogane {
+        bottom: 10px;
+        right: 10px;
+        height: 70px;
+    }
+}
