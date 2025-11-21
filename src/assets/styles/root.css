@@ -4,3 +4,69 @@
   --blue-color: #1F4068;
   --black-detailed: #1B1C25;
 }
+.nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(20px, 5vw, 70px);
+    padding: 3rem 1rem 2rem;
+    margin: 0 auto;
+}
+
+.nav-button {
+    position: relative;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: clamp(50px, 11vw, 60px);
+    min-width: 190px;
+    width: clamp(190px, 28vw, 230px);
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid #252525;
+    border-radius: 30px;
+    color: #333;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-button:hover {
+    scale: 1.05;
+    box-shadow: 0 0 30px rgba(179, 58, 58, 0.6);
+    color: #b33a3a;
+    background-size: cover;
+    background-position: center;
+}
+#Home:hover{
+background-image: url("https://media1.tenor.com/m/ZFjwFPCiUlQAAAAC/effects.gif")
+}
+#OnePiece:hover{
+background-image: url("https://tenor.com/uk/view/luffy-gear5-manga-gif-25215973.gif");
+color: rgb(223, 23, 40);
+font-size: 20px;
+font-family: 'Courier New', Courier, monospace;
+font-weight: bolder;
+
+
+}
+#JujustsuKaisen:hover{
+background-image: url("https://media1.tenor.com/m/OfQbCdGHAP8AAAAd/kenjaku-jujutsu-kaisen-manga.gif");
+color: rgb(10, 87, 37);
+font-size: 20px;
+font-family: 'jujutsu', Courier, monospace;
+font-weight: bolder;
+}
+#ScoobyDoo:hover{
+background-image: url("https://media1.tenor.com/m/r4KjVMPnk90AAAAC/let%27s-go-lfg.gif");
+font-size: 20px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-weight: bolder;
+}
+
+.FUNSITE {
+    position: relative;
+    text-align: center;
+    font-size: 32px;
+    margin: 40px auto;
+}
