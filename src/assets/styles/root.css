@@ -4,6 +4,7 @@
   --blue-color: #1F4068;
   --black-detailed: #1B1C25;
 }
+
 .nav-bar {
     display: flex;
     flex-wrap: wrap;
